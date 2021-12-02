@@ -257,7 +257,7 @@ window.onload = function init()
         }
     }
 }
-
+// test
 function sqr(r,i){
     //computes the square of the vector
     return [Math.pow(r,2) - Math.pow(i,2), 2*r*i] 
