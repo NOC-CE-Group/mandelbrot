@@ -122,14 +122,6 @@ window.onload = function init()
         // camera needs to be moved the difference of before and after
         camera.x += preZoomX - postZoomX;
         camera.y += preZoomY - postZoomY;  
-
-        // Zoom towards mouse
-        // mouseX = evt.clientX;
-        // mouseY = evt.clientY;
-        // mouseX = 1;
-        // mouseY = 1;
-        // camera.x += (mouseX - camera.x ) / 100;
-        // camera.y += (mouseY - camera.y) / 100;
         
         render(vertices.length);
     });
@@ -159,9 +151,26 @@ window.onload = function init()
         mouseDown = true;
         mouseX = evt.clientX;
         mouseY = evt.clientY;
+        console.log("mousedown");
     }, false);
 
-    canvas.addEventListener('mouseup', function (evt) {
+    // canvas.addEventListener('mouseenter', function (evt) {
+    //     // evt.preventDefault();
+    //     mouseDown = true;
+    //     mouseX = evt.clientX;
+    //     mouseY = evt.clientY;
+    //     console.log("onmouseover");
+    // }, false);
+
+    // canvas.addEventListener ("mouseout", 
+    //     function (evt) {
+    //         evt.preventDefault();
+    //         mouseDown = false;
+    //         console.log("mouseout");
+    //     }
+    //     , false);
+
+    document.addEventListener('mouseup', function (evt) {
         evt.preventDefault();
         mouseDown = false;
     }, false);
